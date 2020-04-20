@@ -1,0 +1,310 @@
+\documentclass[12pt]{report}
+
+%%% Paquetes para acentos en Español
+\usepackage[utf8]{inputenc}
+\usepackage[english, spanish]{babel}
+\selectlanguage{spanish}
+\usepackage{fullpage} % changes the margin
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{caption}
+\usepackage{enumitem} 
+\usepackage{chngcntr}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+
+\usepackage{datetime}
+
+\usepackage{cite}
+
+\usepackage{subfig}
+
+\usepackage{listings}
+
+
+\usepackage{color}
+    \definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
+    \definecolor{darkgray}{rgb}{0.4, 0.4, 0.4}
+    \definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+    \definecolor{ocherCode}{rgb}{1, 0.5, 0} % #FF7F00 -> rgb(239, 169, 0)
+    \definecolor{blueCode}{rgb}{0, 0, 0.93} % #0000EE -> rgb(0, 0, 238)
+    \definecolor{greenCode}{rgb}{0, 0.6, 0} % #009900 -> rgb(0, 153, 0)
+
+\lstdefinelanguage{HTML5}{
+    sensitive=true,
+    keywords={%
+    % JavaScript
+    typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break,
+    % HTML
+    html, title, meta, style, head, body, script, canvas,
+    % CSS
+    border:, transform:, -moz-transform:, transition-duration:, transition-property:,
+    transition-timing-function:
+    },
+    % http://texblog.org/tag/otherkeywords/
+    otherkeywords={<, >, \/},   
+    ndkeywords={class, export, boolean, throw, implements, import, this},   
+    comment=[l]{//},
+    % morecomment=[s][keywordstyle]{<}{>},  
+    morecomment=[s]{/*}{*/},
+    morecomment=[s]{<!}{>},
+    morestring=[b]',
+    morestring=[b]",    
+    alsoletter={-},
+    alsodigit={:}
+}
+\lstset{%
+    % Basic design
+    backgroundcolor=\color{lightgray},
+    basicstyle={\small\ttfamily},   
+    frame=l,
+    % Line numbers
+    xleftmargin={0.75cm},
+    numbers=left,
+    stepnumber=1,
+    firstnumber=1,
+    numberfirstline=true,
+    % Code design
+    identifierstyle=\color{black},
+    keywordstyle=\color{blue}\bfseries,
+    ndkeywordstyle=\color{greenCode}\bfseries,
+    stringstyle=\color{ocherCode}\ttfamily,
+    commentstyle=\color{darkgray}\ttfamily,
+    % Code
+    language={HTML5},
+    tabsize=2,
+    showtabs=false,
+    showspaces=false,
+    showstringspaces=false,
+    extendedchars=true,
+    breaklines=true
+}
+\lstdefinestyle{HTML5}
+   {language=HTML5,
+   }
+
+
+
+\usepackage{color}
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+
+
+\usepackage{listings}
+\lstset{frame=Ltb,
+     framerule=0pt,
+     aboveskip=0.5cm,
+     framextopmargin=3pt,
+     framexbottommargin=3pt,
+     framexleftmargin=0.4cm,
+     framesep=0pt,
+     rulesep=.4pt,
+     backgroundcolor=\color{gray97},
+     rulesepcolor=\color{black},
+     %
+     stringstyle=\ttfamily,
+     showstringspaces = false,
+     basicstyle=\tiny\ttfamily,
+     commentstyle=\color{gray45},
+     keywordstyle=\bfseries,
+     %
+     numbers=left,
+     numbersep=15pt,
+     numberstyle=\tiny,
+     numberfirstline = false,
+     breaklines=true,
+   }
+
+\lstnewenvironment{listing}[1][]
+   {\lstset{#1}\pagebreak[0]}{\pagebreak[0]}
+ 
+\lstdefinestyle{consola}
+   {basicstyle=\scriptsize\bf\ttfamily,
+    backgroundcolor=\color{gray75},
+   }
+ 
+\lstdefinestyle{C}
+   {language=C,
+   }
+
+\usepackage{nopageno}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{pdflscape}
+%\usepackage{color}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\hypersetup{
+    pdftitle={Medición de calidad de energía en la industria - Caso practico},
+    pdfauthor={Ivan Dario Echeverry Mancera},
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black
+}
+
+\urlstyle{same}
+
+% This is a function that uses a table to draw lines for 
+% signatures for the two approval pages
+\long\def\signature#1{%
+  \begin{minipage}{6.5in}
+  % \parindent=0.5in
+  \begin{tabular}{l}
+  \hspace{5cm} \hbox {\shortstack{\vrule width 3.5in height 0.4pt}} \hfil \\ % [-15pt]
+  \hspace{5cm} #1
+  \end{tabular}
+  \end{minipage}
+}
+
+% vertical constraints
+\setlength{\paperheight}{10.9688in}
+\setlength{\voffset}{0in}
+\setlength{\topmargin}{0in}
+\setlength{\headheight}{12pt}
+\setlength{\headsep}{26pt}
+\setlength{\footskip}{0in}
+\setlength{\textheight}{8.96875in}
+\addtolength{\textheight}{-12pt}
+\addtolength{\textheight}{-26pt}
+
+% hack vertical adjustments
+%  \addtolength{\voffset}{0.36in}
+%  \addtolength{\textheight}{0.60in}
+%  \addtolength{\voffset}{0.43in}
+%  \addtolength{\textheight}{-0.43in}
+%  \addtolength{\voffset}{-0.125in}
+
+% horizontal constraints
+\setlength{\paperwidth}{8.46875in}
+\setlength{\hoffset}{0.5in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\marginparsep}{0in}
+\setlength{\marginparwidth}{0in}
+\setlength{\textwidth}{5.96875in}
+
+% hack horizontal adjustments
+%\addtolength{\hoffset}{-0.155in}
+%\addtolength{\textwidth}{0.365in}
+
+\titleformat{\chapter} [display]
+{\bfseries\Large} % format
+{Capítulo \thechapter.}
+{0pt}
+{}
+[]
+
+\begin{document}
+%\frontmatter
+
+\input{template_approval.tex}
+
+%
+% TITLE PAGE CONTENTS
+%
+\thispagestyle{empty}
+  
+\null
+\begin{center}
+  \Large Medición de calidad de energía en la industria - Caso practico
+\end{center}
+\vfill
+\begin{center}
+  \vfill
+  \vfill
+  {\bf Ivan Dario Echeverry Mancera}\\
+  Director: Víctor Manuel Garrido Arévalo\\
+  \vfill
+  \vfill
+  \vfill
+  \vfill
+  {\bf Universidad Tecnológica de Bolívar\\
+  Facultad de Ingenierías\\
+  Programa de Ingeniería Eléctrica\\
+  Cartagena}\\
+  \vfill
+  \noindent\noindent 21 de Diciembre del 2019\\
+  %\today
+\end{center}\vskip.5in
+\newpage
+%
+%END TITLE PAGE
+%
+\thispagestyle{empty}
+  
+\null
+\begin{center}
+  \Large Medición de calidad de energía en la industria - Caso practico
+\end{center}
+\vfill
+\begin{center}
+  {\bf Ivan Dario Echeverry Mancera}\\
+  \vfill
+  \vfill
+  Trabajo de grado para optar al título de\\
+  \vfill
+  \vfill
+  {\bf Ingeniero Electricista}\\
+  \vfill
+  \vfill
+  \vfill
+  Director: Víctor Manuel Garrido Arévalo\\
+  \vfill
+  \vfill
+  {\bf Universidad Tecnológica de Bolívar\\
+  Facultad de Ingenierías\\
+  Cartagena}\\
+  \vfill
+  \noindent\noindent 21 de Diciembre del 2019\\
+  %\today
+\end{center}\vskip.5in
+\newpage
+
+
+{\setlength{\baselineskip}{2\baselineskip}
+\section*{Resumen}
+Con el fin de lograr un mejor desempeño  en el consumo de energía eléctrica las comercializadoras se acogen a normativas y reglamentaciones que el cliente final debe cumplir para la implementación de ampliaciones o estructuras totalmente nuevas. En este documento se da a conocer las pautas, metodología, diseños y recomendaciones realizadas en un caso ejemplar en la industria. La finalidad de estas mediciones es brindar al cliente una charla solución a los problemas que tienen internamente en su sistema eléctrico y facturación dado el caso. Para la realizar este tipo de medición se cuenta con un equipo analizador de red eléctrica que dentro de sus parámetros de medición están, armónicos, factor de potencia, Energía Reactiva, Energía Aparente, Energía Activa, Frecuencia, entre otros. La plantilla cuenta con 5 sensores ubicados en diferentes partes de la zona plantar y un sistema de transmisión inalámbrica. Este instrumento puede ayudar a mejorar la técnica del deportista por medio de un software (Insole) que permite visualizar y analizar los valores de presión de cada sensor en tiempo real. En el diseño de esta plantilla se pudo obtener un dispositivo que cumple con las características necesarias para el monitoreo de la presión plantar del deportista.
+
+\newpage
+\section*{Agradecimientos}
+Agradezco a mi tutor por dedicar tiempo para guiarme de la mejor forma para la culminación de este trabajo, a mis compañeros por motivarme a mejorar en todos los aspectos, a mi familia por estar siempre presentes para darme todo su apoyo y a la Universidad por brindarme espacios de investigación y conocimientos.
+
+\noindent 
+  \par}
+
+%\mainmatter
+
+{\setlength{\baselineskip}{2\baselineskip}
+\setcounter{tocdepth}{3}
+  \tableofcontents
+\renewcommand\listfigurename{Lista de Figuras}
+  \listoffigures
+\renewcommand\listtablename{Lista de Tablas}
+  \listoftables
+\newpage
+  \pagestyle{headings}
+
+
+
+\include{introduccion}
+\include{metodos}
+\include{resultados}
+\include{conclusiones}
+\include{anexos}
+	
+%\par}
+%abbrv
+%unsrt
+
+\pagestyle{empty}
+\sloppy
+\bibliographystyle{unsrt}
+\bibliography{insole}
+
+\end{document}
