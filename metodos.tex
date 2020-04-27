@@ -1,38 +1,51 @@
-\chapter{Materiales y Métodos} \label{sec:Metodos}
+\chapter{Metodología} \label{sec:Metodos}
 
-\section{Requerimientos del sistema}
+%Describe la metodología para la medición de calidad de energía
 
-Una plantilla para visualizar la presión plantar en levantadores de pesas debería tener los siguientes requerimientos:
+\section{Sistema eléctrico, S/E 191, 192, 193 y 194}
+
+%Describe el sistema eléctrico donde se realizo la medición (Imágenes de diagramas unifilares)
+
+\section{Procedimiento de medición}
+
+%Describe el procedimiento y los requerimientos como son facturas, inspección visual y demás para realizar la medición.
+
+\section{Equipo}
+
+%Recuerda describir mas las características del equipo, coloca imágenes del equipo y sus conexiones, imágenes de la aplicación y demás.
+
+Las mediciones se realzaron con un equipo analizador de red eléctrica con las siguientes características:
+
+\begin{table}[H]
+%\small
+%\footnotesize
+%\scriptsize
+%\tiny
+\begin{center}
+\begin{tabular}{| c | c | c |}
+ \hline
+    \textbf{MARCA}    & \textbf{MODELO} & \textbf{PERIODO DE MEDICIÓN} \\  
+ \hline
+      CIRCUITOR       &   MYeBOX 1500   &        1 minuto              \\
+ \hline
+\end{tabular}
+\caption{Características del equipo analizador de red eléctrica utilizado.}
+\label{Table:Caract_MYeBOX}
+\end{center}
+\end{table}
+
+Se realiza la instalación del equipo para medir las siguientes variables en la red eléctrica:
 
 \begin{itemize}
- 
- \item Rango de alta presión. Durante la postura, la presión del pie puede estar en el rango de 0 a 200 kPa; durante la marcha, puede llegar hasta 1000 kPa y, en condiciones extremas, puede llegar hasta 3 MPa \cite{urry1999plantar}. Por lo tanto, el rango de presión debe ser de al menos 3 MPa.
- 
- \item Tamaño, peso y cableado reducidos. Para la colocación en el zapato, la plantilla debe ser delgada, flexible y ligera \cite{abdul2012foot}. Además, para evitar obstruir los movimientos, el cableado debe mantenerse al mínimo, por lo que se desea la transmisión inalámbrica.
- 
- \item Bajo consumo de potencia. Es necesario permitir suficiente autonomía de la batería del dispositivo.  
- 
- \item Tamaño y ubicación del sensor. Se recomienda un tamaño de sensor mínimo de $5 mm \times 5 mm$ \cite{abdul2012foot}. Como la mayor parte del peso del cuerpo está soportado por 15 áreas distribuidas en el talón, la parte media del pie, el metatarso y los dedos de los pies \cite{shu2010shoe}, los sensores deben estar situados en estas áreas.
- 
- \end{itemize} 
+    \item \textbf{Parámetros eléctricos:} Tensión, corriente, frecuencia.
+    \item \textbf{Potencia y energía:} Activa, reactiva, aparente, factor de potencia.
+    \item \textbf{Armónicos:} Distorsión armónica total en tensión (THD) y en corriente (TDD).
+\end{itemize} 
 
-\section{Descripción del sistema}
+\section{Puntos de medición}
 
-La plantilla está compuesta por cinco sensores de fuerza (Flexiforce A201,Teskcan), un circuito de acondicionamiento de señal, un microcontrolador (PIC16F87A, Microchip) y un módulo de Bluetooth (HC-06), para la transmisión inalámbrica de datos. Los sensores tienen un rango de fuerza de 0 a 445 N, y un área de 0.713 cm$^{2}$, lo que permite mediciones de presión de hasta 6.24 MPa. Para la calibración, se aplicaron fuerzas de compresión normales a la superficie del sensor, como se ve en la figura \ref{fig:Montaje}. Se utilizó una máquina de carga axial para aplicar fuerzas de 0 a 400 N (Marshal and CBR PS-25). Las curvas de calibración se muestran en la figura \ref{fig:Comportamiento}.
+Se realiza medición sobre la Subestación 191, 192, 193 y 194 en la ciudad de Cartagena.
 
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.6\textwidth]{./image/DiagramaBloques.png}
-%\caption{Diagrama de Bloques del sistema de adquisición de datos.}
-%\label{fig:DiagramaBloque}
-%\end{figure}
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics[width=0.7\textwidth]{./Documentos_PDF/Diagrama_de_Bloques_sistema_Insole.pdf}
-%\caption{Diagrama de Bloques del sistema de adquisición de datos.}
-%\label{fig:DiagramaBloque}
-%\end{figure}
 
 \begin{figure}[H]
 \centering

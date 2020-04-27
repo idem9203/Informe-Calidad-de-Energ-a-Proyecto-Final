@@ -22,6 +22,9 @@
 
 \usepackage{listings}
 
+\usepackage{amsmath}
+\DeclareMathOperator{\comando}{descripción}
+
 
 \usepackage{color}
     \definecolor{lightgray}{rgb}{0.95, 0.95, 0.95}
@@ -140,7 +143,7 @@
 \usepackage{titlesec}
 
 \hypersetup{
-    pdftitle={Medición de calidad de energía en la industria - Caso practico},
+    pdftitle={Medición de calidad de energía en la industria - Caso ejemplo},
     pdfauthor={Ivan Dario Echeverry Mancera},
     colorlinks=true,
     urlcolor=black,
@@ -212,7 +215,7 @@
   
 \null
 \begin{center}
-  \Large Medición de calidad de energía en la industria - Caso practico
+  \Large Medición de calidad de energía en la industria - Caso ejemplo
 \end{center}
 \vfill
 \begin{center}
@@ -240,7 +243,7 @@
   
 \null
 \begin{center}
-  \Large Medición de calidad de energía en la industria - Caso practico
+  \Large Medición de calidad de energía en la industria - Caso ejemplo
 \end{center}
 \vfill
 \begin{center}
@@ -269,7 +272,7 @@
 
 {\setlength{\baselineskip}{2\baselineskip}
 \section*{Resumen}
-Con el fin de lograr un mejor desempeño  en el consumo de energía eléctrica las comercializadoras se acogen a normativas y reglamentaciones que el cliente final debe cumplir para la implementación de ampliaciones o estructuras totalmente nuevas. En este documento se da a conocer las pautas, metodología, diseños y recomendaciones realizadas en un caso ejemplar en la industria. La finalidad de estas mediciones es brindar al cliente una charla solución a los problemas que tienen internamente en su sistema eléctrico y facturación dado el caso. Para la realizar este tipo de medición se cuenta con un equipo analizador de red eléctrica que dentro de sus parámetros de medición están, armónicos, factor de potencia, Energía Reactiva, Energía Aparente, Energía Activa, Frecuencia, entre otros. La plantilla cuenta con 5 sensores ubicados en diferentes partes de la zona plantar y un sistema de transmisión inalámbrica. Este instrumento puede ayudar a mejorar la técnica del deportista por medio de un software (Insole) que permite visualizar y analizar los valores de presión de cada sensor en tiempo real. En el diseño de esta plantilla se pudo obtener un dispositivo que cumple con las características necesarias para el monitoreo de la presión plantar del deportista.
+Con el fin de lograr un mejor desempeño  en el consumo de energía eléctrica las comercializadoras se acogen a normativas y reglamentaciones que el cliente final debe cumplir para la implementación de ampliaciones o estructuras totalmente nuevas. En este documento se da a conocer las pautas, metodología, diseños y recomendaciones realizadas en un caso ejemplar en la industria. La finalidad de estas mediciones es brindar al cliente una charla solución a los problemas que tienen internamente en su sistema eléctrico y facturación dado el caso. Para realizar este tipo de medición se cuenta con un equipo analizador de red eléctrica que dentro de sus parámetros de medición están, medida de verdadero valor eficaz (TRMS) armónicos, factor de potencia, Energía Reactiva, Energía Aparente, Energía Activa, Frecuencia, entre otros. Los casos aquí expuestos son realizados a 4 subestaciones denominadas 191, 192, 193 y 194. El fin de estas mediciones es determinar el estado de la calidad de energía evaluando el comportamiento de las cargas y determinar la causa de la penalización en la factura según sea el caso. En el caso ejemplo se pudo visualizar problemas en armónicos, en desbalances de tensión, desbalaces en corriente, factor de potencia capacitivo en algunos casos y Cos Phi por debajo de 0.9.
 
 \newpage
 \section*{Agradecimientos}
@@ -293,6 +296,9 @@ Agradezco a mi tutor por dedicar tiempo para guiarme de la mejor forma para la c
 
 
 \include{introduccion}
+\include{objetivos}
+\include{conceptos}
+\include{normatividad}
 \include{metodos}
 \include{resultados}
 \include{conclusiones}

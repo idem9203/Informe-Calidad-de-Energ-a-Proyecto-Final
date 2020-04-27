@@ -1,0 +1,162 @@
+\chapter{Normatividad} \label{sec:Normatividad}
+
+\textbf{Tensión:} De \textbf{Resolución CREG 024/2005 ANEXO 1} Las tensiones en estado estacionario a 60Hz no podrían ser inferiores al 90\% de la tensión nominal ni ser superiores al 110\% de esta durante un periodo superior a un minuto. Esta variable eléctrica depende del operador de red en este caso ELECTRICARIBE.
+
+\textbf{Frecuencia: Resolución CREG 070/98 6.2.1.1} La frecuencia nominal del SIN es 60Hz y su rango de variación de operacion esta entre 59.8 y 60.2 Hz en condiciones normales de operación. El OR y los Usuarios deben tener en cuenta que en estados de emergencia, fallas, déficit energético y periodos de restablecimiento, la frecuencia puede oscilar entre 57.5 y 63.0 Hz por un periodo de tiempo de quince (15) segundos, en concordancia con lo establecido en los numerales 2.2.5 y 5.1 del Código de Operación incluido en el Código de Redes (Resolución CREG 025 de 1995).
+
+\textbf{Distorsión Armónica de Tensión (THD):} La magnitud de armónicos admisible en un sistema se encuentra establecido, entre otros, por la norma \textbf{IEEE Standard 519-1992}, "IEEE Recommended Practices and Requierements for Harmonic Control in Power Systems", fijando los limites para la distorsión de tensión según la tensión nominal del sistema:
+
+\begin{table}[H]
+\small
+%\footnotesize
+%\scriptsize
+%\tiny
+\begin{center}
+\begin{tabular}{| l | c | c |}
+ \hline
+             \multicolumn{3}{|c|}{\textbf{LIMITES DE DISTORSIÓN DE TENSIÓN}}              \\
+ \hline
+    Tensión en el PCC    & Distorsión de tensión Individual & Distorsión total de tensión \\  
+ \hline
+    Menor de 69 kV       &                 3                &              5              \\
+ \hline
+	Entre 69 kV y 161 kV &                1,5               &             2,5             \\
+ \hline
+	Mayor de 161 kV      &                 1                &             1,5             \\
+ \hline
+\end{tabular}
+\caption{Limites de Distorsión de Tensión.}
+\label{Table:Limites_Distor_Tension}
+\end{center}
+\end{table}
+
+\textbf{Limites de distorsión en Corriente:} Las corrientes armónicas para cada usuario son evaluadas en la acometida y los limites se establecen en base a la relación entre la corriente de cortocircuito y la demanda máxima de corriente de la carga del usuario.
+
+\textbf{Distorsión Armónica de Corriente (TDD):} La magnitud de armónicos admisible en un sistema.
+
+\begin{table}[H]
+\small
+%\footnotesize
+%\scriptsize
+%\tiny
+\begin{center}
+\begin{tabular}{| c | c | c | c | c | c | c |}
+ \hline
+                                            \multicolumn{7}{|c|}{\textbf{IEEE 519}}                                                \\
+ \hline
+                  \multicolumn{7}{|c|}{\textbf{Limites de la distorsión armónica en corriente en la acometida}}                  \\
+ \hline
+    $I_{cc}/I_L$ &    TDD    &  $h < 11$   &   $11 \leq h < 17$   &   $17 \leq h < 23$   &   $23 \leq h < 35$   &   $h \geq 35$  \\ 
+ \hline
+                                           \multicolumn{7}{|c|}{\textbf{$V_n \leq 69 kV$}}                                       \\
+ \hline
+    $< 20$       &  $5.0\%$  &    $4.0\%$  &         $2.0\%$      &        $1.5\%$       &         $0.6\%$      &     $0.3\%$    \\
+ \hline
+	$20-50$      &  $8.0\%$  &    $7.0\%$  &         $3.5\%$      &        $2.5\%$       &         $1.0\%$      &     $0.5\%$    \\
+ \hline
+	$50-100$     & $12.0\%$  &   $10.0\%$  &         $4.5\%$      &        $4.0\%$       &         $1.5\%$      &     $0.7\%$    \\
+ \hline
+    $100-1000$   & $15.0\%$  &   $12.0\%$  &         $5.5\%$      &        $5.0\%$       &         $2.0\%$      &     $1.0\%$    \\
+ \hline
+    $>1000$      & $20.0\%$  &   $15.0\%$  &         $7.0\%$      &        $6.0\%$       &         $2.5\%$      &     $1.4\%$    \\
+ \hline
+                                       \multicolumn{7}{|c|}{\textbf{$69 kV < V_n \leq 161 kV$}}                                  \\
+ \hline
+    $< 20*$      &  $2.5\%$  &    $2.0\%$  &         $1.0\%$      &       $0.75\%$       &         $0.3\%$      &     $0.15\%$   \\
+ \hline
+	$20-50$      &  $4.0\%$  &    $3.5\%$  &        $1.75\%$      &       $1.25\%$       &         $0.5\%$      &    $0.25\%$    \\
+ \hline
+	$50-100$     &  $6.0\%$  &    $5.0\%$  &        $2.25\%$      &        $2.0\%$       &        $0.75\%$      &    $0.35\%$    \\
+ \hline
+    $100-1000$   &  $7.5\%$  &    $6.0\%$  &        $2.75\%$      &        $2.5\%$       &         $1.0\%$      &     $0.5\%$    \\
+ \hline
+    $>1000$      & $10.0\%$  &    $7.5\%$  &         $3.5\%$      &        $3.0\%$       &        $1.25\%$      &     $0.7\%$    \\
+ \hline
+                                              \multicolumn{7}{|c|}{\textbf{$V_n > 161 kV$}}                                      \\
+ \hline
+    $< 50$       &  $2.5\%$  &    $2.0\%$  &         $1.0\%$      &       $0.75\%$       &         $0.3\%$      &     $0.15\%$   \\
+ \hline
+	$\geq 50$    &  $4.0\%$  &    $3.5\%$  &        $1.75\%$      &       $1.25\%$       &         $0.5\%$      &    $0.25\%$    \\
+ \hline
+\end{tabular}
+\caption{Limites de Distorsión armónica de corriente.}
+\label{Table:Limites_Distor_Corriente}
+\end{center}
+\end{table}
+
+\begin{itemize}
+    \item * Todos los equipos de generación de energía están limitados a estos valores de corriente, sin importar la relación ${I}_{cc}/I_L$.
+    \item Para las armónicas pares, los limites son el $25\%$ de los valores específicos en la tabla.
+    \item No se permite la existencia de componentes de corriente directa, que corresponden a la armónica cero.
+    \item Si las cargas que producen las armónicas utilizan convertidores con numero de pulsos q mayor a 6, los limites indicados en la tabla se incrementan por un factor (Ver Ecuación \ref{eqn:incremento_factor}). 
+\end{itemize}
+
+\begin{equation} \label{eqn:incremento_factor}
+    \sqrt{\frac{q}{6}}
+\end{equation}
+
+La Distorsión de demanda total TDD esta definida como (Ver Ecuación \ref{eqn: Ecuacion_TDD}):
+
+\begin{equation} \label{eqn: Ecuacion_TDD}
+\small
+    TDD = \frac{\sqrt{\sum\limits_{h=2}^{\infty}{{I_h}^{2}}}}{I_L} \times 100\%
+\end{equation}
+
+Donde:
+
+$I_h:$ Magnitud de la armónica individual.
+
+$I_L:$ Demanda máxima de la corriente fundamental de la carga.
+
+$h:$ Orden armónico impar.
+
+${I}_{cc}:$ Deben utilizarse aquella que bajo condiciones normales de operación, resulte en la mínima corriente de cortocircuito en la acometida, ya que este valor reduce la relación ${{I}_{cc}}/{I_L}$ y la evaluación es mas severa.
+
+$I_L:$ Es la demanda máxima de la corriente fundamental en la acometida y puede calcularse como el promedio de las demandas máximas de corriente mensuales de los ultimo 12 meses o puede estimarse para usuarios que inician su operación.
+
+
+
+\section{Fuentes que producen las Armónicas}
+
+La norma IEEE 519-1992, relativa a "Practicas recomendadas y requerimientos para el control de armónicos en sistemas eléctricos de potencia" agrupa a las fuentes emisoras de armónicas en tres categorías diferentes:
+
+\begin{itemize}
+    \item Dispositivos electrónicos de potencia.
+    \item Dispositivos productos de arcos eléctricos.
+    \item Dispositivos ferromagnéticos.
+\end{itemize}
+
+Algunos de los equipos y procesos que se ubiquen en estas categorías son:
+
+\begin{itemize}
+    \item Motores de corriente directa accionados por tiristores.
+    \item Inversores de frecuencia.
+    \item Fuentes ininterrumpidas UPS.
+    \item Computadoras.
+    \item Equipo electrónico.
+    \item Hornos de inducción.
+    \item Equipos de soldadura.
+    \item Transformadores sobreexcitados.
+\end{itemize}
+
+
+
+\section{Efectos de las Armónicas}
+
+Las corrientes armónicas generadas por cargas no lineales, están desfasadas noventa grados con respecto al voltaje que las produce, fluyendo una potencia distorsionante de la fuente a la red eléctrica y viceversa, que solo es consumida como perdidas por efecto Joule que se transforman en calor, de forma equivalente a la potencia reactiva fundamental relacionada al factor de potencia de desplazamiento.
+
+Algunos de los efectos nocivos producidos por el flujo de corrientes armónicas son:
+
+\begin{itemize}
+    \item Aumento en las perdidas por efecto Joule (${I^2} \times R$).
+    \item Sobrecalentamiento en conductores del neutro.
+    \item Sobrecalentamiento en motores, generadores, transformadores y cables, reduciendo su vida.
+    \item Vibración en motores y generadores.
+    \item Falla de bancos de capacitores.
+    \item Falla de transformadores.
+    \item Efectos de resonancia que amplifican los problemas mencionados anteriormente y pueden provocar incidentes eléctricos, mal funcionamiento y fallos destructivos de equipos de potencia y control.
+    \item Problemas de funcionamiento en dispositivos electrónicos sensibles.
+    \item Interferencias en sistemas de telecomunicaciones.
+\end{itemize}
+
+Los efectos dependerán de la proporción que exista entre la carga no lineal y la carga total del sistema, aunado a que se debe mantener la distorsión dentro de los limites establecidos por las normas.
